@@ -7,30 +7,73 @@
     padding: 0px;
 }
 body{
+    min-height: 100vh;
+    min-width: 100vw;
+
+}
+
+#LOADER{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width:100vw;
+    background: #000;
+    text-align: center;
+    color: white;
+    animation: fade-out 1s linear forwards;
+    & pre{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: all 0.5s;
+        animation: rotate-line 1s linear infinite alternate;
+        
+    }
+}
+@keyframes rotate-line {
+    
+    to{
+        /* transform-origin: 50% 100%; */
+        transform: rotateY(240deg);
+    }
+    
+}
+@keyframes fade-out {
+    
+    to{
+        display: none;
+        opacity: 0;
+    }
+    
+}
+
+
+
+
+#window4{
+    display: none;
     height: 100vh;
     width: auto;
-    background-color: navy;
-}
-#window4{
-    height: 100%;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-
-
-    background-image: url("https://staticg.sportskeeda.com/editor/2022/04/f745a-16512672729695-1920.jpg");
-    background-position: center;
-    background-size: cover;
-
+    
+    background-color: #1f1f1f;
 }
 #for-pokemon{
 
-    background-color: transparent;
-    backdrop-filter: blur(40px);
-    max-width: 90%;
-    min-height: 80vh;
+    background-image: url("https://getwallpapers.com/wallpaper/full/7/8/c/60488.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
 
+    width: clamp(300px, 90vw, 800px);
+    height: 80vh;
+    overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,23 +82,20 @@ body{
     padding: 1rem;
     border-radius: 15px;
     border: 2px solid white;
-    box-shadow: 0px 3px 25px 1px white;
+    box-shadow: 0px 3px 25px 1px rgb(0, 0, 0) ;
     color: white;
 
-    margin-top: 3rem;
+    margin: 1rem;
 
-    overflow: hidden;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     & .form-head{
         margin-top:2rem ;
         font-family: "Protest Guerrilla", sans-serif;
-        font-size: 2rem;
-        font-size: clamp(14px, 8vw, 34px);
-        background-color: #c0281d;
+        font-size: clamp(20px, 12vw, 34px);
+        background:linear-gradient(to right,maroon, rgb(255, 0, 17), rgb(57, 0, 0));
         border-radius: 15px;
         padding: 5px 1ch;
-        box-shadow: 0px 3px 1px 1px rgb(247, 247, 247);
         border: 2px solid white;
     
     }
@@ -68,13 +108,13 @@ body{
         /* border: 1px solid white; */
         border-radius: 5px;
         background-color: transparent;
+        backdrop-filter: blur(20px);
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         letter-spacing: 1px;
-        font-size: 1.9rem;
+        font-size: clamp(14px, 8vw, 34px);
         font-variant: small-caps;
         cursor:text;
         color: whitesmoke;
-        box-shadow: 0px 1px 10px 00px rgb(255, 255, 255);
         scale: 0.9;
         transition: all 0.2s;
     }
@@ -87,15 +127,16 @@ body{
     }
     & .text-input::placeholder{
         color: white;
-        font-size: 1.5rem;
-        font-family: 'Times New Roman', Times, serif;
+        font-size: clamp(14px, 8vw, 34px);
+
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
         display: grid;
         transform: translate(0px , -0.5ch);
     }
 
     & button{
-        background-color: #c0281d;
+        background-color: #171717;
         color: white;
         padding: 0.5ch 1ch;
         border: 2px solid white;
@@ -118,8 +159,8 @@ body{
         padding: 15px;
         border-radius: 5px;
         border: 2px solid white;
-        box-shadow: 0px 2px 1px 1px #fff;
         transition: all 0.2s ease-in-out;
+        background-color: #000000;
     }
     & .images:hover{
         scale: 1.2;
@@ -131,16 +172,24 @@ body{
     & .pokemon-detail{
         scrollbar-color: transparent;
         width: clamp(156px, 65vw, 250px);
-        height: clamp(96px, 50vh, 300px);
+        height: clamp(96px, 150px, 300px);
         text-align: left;
         overflow: auto;
-        background-color: #2d2d2d;
+        background-color: transparent;
+        /* backdrop-filter:; */
+        backdrop-filter: blur(20px) brightness(0.5);
         padding: 1ch;
         border-radius: 15px;
         border: 2px solid white;
-        margin-top: 3rem;
+        margin: 1rem;
     
     }
     
 }
 
+
+@media screen and (max-width:910px) {
+    #for-pokemon{
+        flex-flow: nowrap column;
+    }
+}

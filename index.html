@@ -9,11 +9,17 @@
     
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
+    <script src="index2.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <div id="LOADER">
+        THE POKE-TAB IS BOOTING..
+        PLEASE BE PATIENT 😌🙏❤️
+        <pre id="loading-bar">__________</pre>
+    </div>
     <div class="windows" id="window4">
     <form id="for-pokemon" class="forms">
         <label for="pokemon-input" class="form-head">YOUR POKE-TAB 📱</label>
@@ -38,9 +44,12 @@
 
             </p>
         </div>
-        <button style="background-color: rgb(46, 73, 227);" id="copy-button" type="submit" onclick="copy_field()">
+        <button id="copy-button" type="submit" onclick="copy_field()">
             COPY 🔗
         </button>
+        <audio id="music" hidden>
+            <source src="" type="audio/mp3" />
+        </audio>
     </form>
     </div>
 </body>

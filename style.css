@@ -125,6 +125,15 @@ body{
         flex-wrap: wrap;
         align-items:center;
     }
+
+    & .copy-reset{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-flow: row wrap;
+        align-items:center;
+
+    }
     & .text-input::placeholder{
         color: white;
         font-size: clamp(14px, 8vw, 34px);
@@ -191,5 +200,11 @@ body{
 @media screen and (max-width:910px) {
     #for-pokemon{
         flex-flow: nowrap column;
+    }
+    .pokemon-detail{
+        margin: 5px;
+    }
+    button{
+        scale: 0.85;
     }
 }

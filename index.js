@@ -125,7 +125,7 @@ function detail_setter(object_pokemon){
 
 
        details_frame.style.display="block";
-       copy_button.style.display="block";
+       copy_button.style.display="inline";
        reset_button.style.display="inline";
        return pokemon_type.slice(0,pokemon_type.length-1)+" .";
     }
@@ -142,7 +142,7 @@ function detail_setter(object_pokemon){
 
             
     pokemon_details_p.innerHTML=pokemon_details_p.innerHTML.toUpperCase();   
-    copy_button.style.display="block";    
+    copy_button.style.display="inline";    
     reset_button.style.display="inline"; 
 }
 function reset_field(){

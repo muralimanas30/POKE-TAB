@@ -33,9 +33,7 @@
                 FETCH 🔎
             </button>
         </span>
-        <button id="reset-button" type="submit" onclick="reset_field()">
-            RESET ⬅️
-        </button>
+
         <img alt="YOUR POKEMON" srcset="" id="pokemon-image" class="images"
         src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png">
         <div class="pokemon-detail">
@@ -44,9 +42,16 @@
 
             </p>
         </div>
-        <button id="copy-button" type="submit" onclick="copy_field()">
-            COPY 🔗
-        </button>
+        <span id="copy-reset">
+    
+            <button id="copy-button" type="submit" onclick="copy_field()">
+                COPY 🔗
+            </button>
+            <button id="reset-button" type="submit" onclick="reset_field()">
+                RESET ⬅️
+            </button>
+    
+        </span>
         <audio id="music" hidden>
             <source src="" type="audio/mp3" />
         </audio>

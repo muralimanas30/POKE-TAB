@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta name="description" content="A POKETAB DESIGNED TO RETREIVE KEY DETAILS OF ANY POKEMON EVER KNOWN.. 
+    COME CHECK OUT THIS APPLICATION , DEFINITELY RECOMMENDED IF YOU WANT
+    TO BE A SUCCESSFULL POKEMON TRAINER.">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="windows" id="window4">
+    <form id="for-pokemon" class="forms">
+        <label for="pokemon-input" class="form-head">YOUR POKE-TAB 📱</label>
+        <span class="input-and-button">
+            
+            <input type="text" name="pokemon-name"
+                     id="pokemon-input"
+                      class="text-input"
+                      placeholder="id or name">
+            <button id="fetch-button" type="submit" onclick="main()">
+                FETCH 🔎
+            </button>
+        </span>
+        <button id="reset-button" type="submit" onclick="reset_field()">
+            RESET ⬅️
+        </button>
+        <img alt="YOUR POKEMON" srcset="" id="pokemon-image" class="images"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png">
+        <div class="pokemon-detail">
+            ALL DETAILS HERE:
+            <p class="pokemon-text" id="pk-text">
+
+            </p>
+        </div>
+        <button style="background-color: rgb(46, 73, 227);" id="copy-button" type="submit" onclick="copy_field()">
+            COPY 🔗
+        </button>
+    </form>
+    </div>
+</body>
+</html>

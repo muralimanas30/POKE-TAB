@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Exo+2:wght@600&family=Monoton&family=Protest+Guerrilla&family=Protest+Riot&display=swap");
+* , html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0px;
+    outline: none;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    width: auto;
+    background-color: navy;
+}
+#window4{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    background-image: url("https://staticg.sportskeeda.com/editor/2022/04/f745a-16512672729695-1920.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+#for-pokemon{
+
+    background-color: transparent;
+    backdrop-filter: blur(40px);
+    max-width: 90%;
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-flow: wrap column;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid white;
+    box-shadow: 0px 3px 25px 1px white;
+    color: white;
+
+    margin-top: 3rem;
+
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    & .form-head{
+        margin-top:2rem ;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-size: 2rem;
+        font-size: clamp(14px, 8vw, 34px);
+        background-color: #c0281d;
+        border-radius: 15px;
+        padding: 5px 1ch;
+        box-shadow: 0px 3px 1px 1px rgb(247, 247, 247);
+        border: 2px solid white;
+    
+    }
+
+    & .text-input{
+        height: 2.5ch;
+        width: 12ch;
+        padding: 1ch;
+        border: 1px solid rgb(255, 255, 255);
+        /* border: 1px solid white; */
+        border-radius: 5px;
+        background-color: transparent;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 1px;
+        font-size: 1.9rem;
+        font-variant: small-caps;
+        cursor:text;
+        color: whitesmoke;
+        box-shadow: 0px 1px 10px 00px rgb(255, 255, 255);
+        scale: 0.9;
+        transition: all 0.2s;
+    }
+    & .input-and-button{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items:center;
+    }
+    & .text-input::placeholder{
+        color: white;
+        font-size: 1.5rem;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        display: grid;
+        transform: translate(0px , -0.5ch);
+    }
+
+    & button{
+        background-color: #c0281d;
+        color: white;
+        padding: 0.5ch 1ch;
+        border: 2px solid white;
+        border-radius: 5px;
+        text-align: center;
+        font-family: "Protest Guerrilla", sans-serif;
+        letter-spacing: 2.5px;
+        font-size: 1.25rem;
+        transition: all 0.1s; 
+    }
+    & button:hover{
+        background-color: rgb(255, 255, 255);
+        color: #c0281d;
+    }
+    & button:active{
+        transform: scaleX(1.2);
+    }
+
+    & .images{
+        padding: 15px;
+        border-radius: 5px;
+        border: 2px solid white;
+        box-shadow: 0px 2px 1px 1px #fff;
+        transition: all 0.2s ease-in-out;
+    }
+    & .images:hover{
+        scale: 1.2;
+        
+    }
+    .text-input , button{
+        display: inline;
+    }
+    & .pokemon-detail{
+        scrollbar-color: transparent;
+        width: clamp(156px, 65vw, 250px);
+        height: clamp(96px, 50vh, 300px);
+        text-align: left;
+        overflow: auto;
+        background-color: #2d2d2d;
+        padding: 1ch;
+        border-radius: 15px;
+        border: 2px solid white;
+        margin-top: 3rem;
+    
+    }
+    
+}
+
